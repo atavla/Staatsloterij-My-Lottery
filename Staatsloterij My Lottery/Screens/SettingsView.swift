@@ -57,9 +57,6 @@ struct SettingsView: View {
                             store.updateSettings(settings)
                         }
                     ))
-//                    Text(store.t("notification_note"))
-//                        .font(.footnote)
-//                        .foregroundStyle(.secondary)
                 }
 
                 Section(store.t("responsible_section")) {
@@ -72,9 +69,9 @@ struct SettingsView: View {
                         }
                     ), in: 10...250, step: 5)
                     LabeledContent(store.t("monthly_limit"), value: "€\(store.data.settings.responsiblePlayLimit.formatted(.number.precision(.fractionLength(0))))")
-                    if let helpURL = URL(string: "https://loketkansspel.nl") {
-                        Link(store.t("help_advice"), destination: helpURL)
-                    }
+//                    if let helpURL = URL(string: "https://loketkansspel.nl") {
+//                        Link(store.t("help_advice"), destination: helpURL)
+//                    }
                 }
 
                 Section(store.t("security")) {
